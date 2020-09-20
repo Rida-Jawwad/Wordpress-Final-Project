@@ -143,11 +143,32 @@ function job_board_scripts() {
 	wp_enqueue_style( 'job-board-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'job-board-style', 'rtl', 'replace' );
 
+	wp_enqueue_style( 'custom-bs', get_template_directory_uri() . '/css/custom-bs.css' );
+	wp_enqueue_style( 'jquery-fancybox', get_template_directory_uri() . '/css/jquery.fancybox.min.css' );
+	wp_enqueue_style( 'bootstrap-select', get_template_directory_uri() . '/css/bootstrap-select.min.css' );
+	wp_enqueue_style( 'icomoon', get_template_directory_uri() . '/fonts/icomoon/style.css' );
+	wp_enqueue_style( 'line-icons', get_template_directory_uri() . '/fonts/line-icons/style.css' );
+	wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/css/owl.carousel.min.css' );
+	wp_enqueue_style( 'animate-min', get_template_directory_uri() . '/css/animate.min.css' );
+	wp_enqueue_style( 'template-style', get_template_directory_uri() . '/css/style.css' );
+
 	wp_enqueue_script( 'job-board-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	wp_enqueue_script( 'jquery-min-js', get_template_directory_uri() . '/js/jquery.min.js' , array(), '20151215', true );
+	wp_enqueue_script( 'bootstrap-bundle-js', get_template_directory_uri() . '/js/bootstrap.bundle.min.js' , array(), '20151215', true );
+	wp_enqueue_script( 'isotope-pkgd-min-js', get_template_directory_uri() . '/js/isotope.pkgd.min.js' , array(), '20151215', true );
+	wp_enqueue_script( 'stickyfill-min-js', get_template_directory_uri() . '/js/stickyfill.min.js' , array(), '20151215', true );
+	wp_enqueue_script( 'jquery-fancybox-min-js', get_template_directory_uri() . '/js/jquery.fancybox.min.js' , array(), '20151215', true );
+	wp_enqueue_script( 'jquery-easing-min-js', get_template_directory_uri() . '/js/jquery.easing.1.3.js' , array(), '20151215', true );
+	wp_enqueue_script( 'jquery-waypoints-min-js', get_template_directory_uri() . '/js/jquery.waypoints.min.js' , array(), '20151215', true );
+	wp_enqueue_script( 'jquery-animateNumber-min-js', get_template_directory_uri() . '/js/jquery.animateNumber.min.js' , array(), '20151215', true );
+	wp_enqueue_script( 'owl-carousel-min-js', get_template_directory_uri() . '/js/owl.carousel.min.js' , array(), '20151215', true );
+	wp_enqueue_script( 'bootstrap-select-min-js', get_template_directory_uri() . '/js/bootstrap-select.min.js' , array(), '20151215', true );
+	wp_enqueue_script( 'template-custom-js', get_template_directory_uri() . '/js/custom.js' , array(), '20151215', true );
+	
 }
 add_action( 'wp_enqueue_scripts', 'job_board_scripts' );
 
